@@ -12,7 +12,7 @@
 @if(Model != null)
 {
     <p>Cadastro efetuado com sucesso</p>
-    <p> Usuario cadastrado: </p>
+    <p> @TempData["msg"] </p>
     <p>
         Nome: @Model.Nome
         Nascimento: @Model.DataNacimento

@@ -22,6 +22,7 @@ namespace Fiap.Aula02.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Usuario usuario)
         {
+            TempData["msg"] = "Usuario cadastrado";
             return View(usuario);
         }
     }
