@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+@model Produto
+
+<h1>Cadastrar</h1>
+
+<p>@ViewData["nome"]</p>
+@if (ViewBag.prod != null)
+{
+    <p> @ViewBag.prod.Preco </p>
+}
+
+<p>@TempData["msg"]</p>
+
+@if (Model != null)
+{
+    <p>Preço: @Model.Preco</p>
+    <p>Nome: @Model.Nome</p>
+}
+
+
+<form method="post">
+    <input type="text" name="nome" placeholder="Nome do Produto">
+    <input type="text" name="preco" placeholder="Preço do Produto">
+    <input type="submit" name="cadastrar" value="Cadastrar">
+</form>
+
